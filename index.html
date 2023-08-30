@@ -1,0 +1,39 @@
+<canvas id="lienzo" 
+        width="500" 
+        height="500" 
+        style="border: 1px solid black">
+    <script>
+        let lienzo = document.getElementById("lienzo");
+        let ctx = lienzo.getContext('2d');
+
+        ctx.font = "30px Arial";
+
+        ctx.fillText("Mi primer juego", 10, 30);
+
+        ctx.fillRect(10, 30, 50, 50);
+
+        let x = 40;
+        let spdX = 20;
+
+        let y = 100; 
+        let spdY = 20;
+     
+
+        function update(){
+            x = y + spdX;
+            y = y + spdY;
+            ctx.fillText("J", x, y)
+        }
+
+        update();
+        update();
+        update();
+        update();
+
+
+        setInterval(update, 1000)
+
+ 
+
+    </script>
+</canvas>  
